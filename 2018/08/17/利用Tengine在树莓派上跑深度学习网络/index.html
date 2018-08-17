@@ -3,23 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>树莓派上tengine平台的搭建 | Refrigerator</title>
+  <title>利用tengine在树莓派上跑深度学习网络 | Refrigerator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模块化的引擎。 Tengine在嵌入式设备上支持CPU，GPU，DLA/NPU，DSP异构计算的计算框架，实现异构计算的调度器，基于ARM平台的高效的计算库实现，针对特定硬件平台的性能优化，动态规划计算图的内存使用，提供对于网络远端AI计算能力的访问支持，支">
+  <meta name="description" content="树莓派是国内比较流行的一款卡片式计算机，但是受限于其硬件配置，用树莓派玩深度学习似乎有些艰难。最近OPENAI为嵌入式设备推出了一款AI框架Tengine，其对于配置的要求相比传统框架降低了很多，我尝试着在树莓派上进行了搭建并成功运行了YOLOv2网络。 Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树莓派上Tengine平台的搭建">
-<meta property="og:url" content="http://songrbb.github.io/2018/08/16/在树莓派上配置tengine/index.html">
+<meta property="og:title" content="利用Tengine在树莓派上跑深度学习网络">
+<meta property="og:url" content="http://songrbb.github.io/2018/08/17/利用Tengine在树莓派上跑深度学习网络/index.html">
 <meta property="og:site_name" content="Refrigerator">
-<meta property="og:description" content="Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模块化的引擎。 Tengine在嵌入式设备上支持CPU，GPU，DLA/NPU，DSP异构计算的计算框架，实现异构计算的调度器，基于ARM平台的高效的计算库实现，针对特定硬件平台的性能优化，动态规划计算图的内存使用，提供对于网络远端AI计算能力的访问支持，支">
+<meta property="og:description" content="树莓派是国内比较流行的一款卡片式计算机，但是受限于其硬件配置，用树莓派玩深度学习似乎有些艰难。最近OPENAI为嵌入式设备推出了一款AI框架Tengine，其对于配置的要求相比传统框架降低了很多，我尝试着在树莓派上进行了搭建并成功运行了YOLOv2网络。 Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-08-16T10:38:26.274Z">
+<meta property="og:updated_time" content="2018-08-17T01:19:26.954Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="树莓派上Tengine平台的搭建">
-<meta name="twitter:description" content="Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模块化的引擎。 Tengine在嵌入式设备上支持CPU，GPU，DLA/NPU，DSP异构计算的计算框架，实现异构计算的调度器，基于ARM平台的高效的计算库实现，针对特定硬件平台的性能优化，动态规划计算图的内存使用，提供对于网络远端AI计算能力的访问支持，支">
+<meta name="twitter:title" content="利用Tengine在树莓派上跑深度学习网络">
+<meta name="twitter:description" content="树莓派是国内比较流行的一款卡片式计算机，但是受限于其硬件配置，用树莓派玩深度学习似乎有些艰难。最近OPENAI为嵌入式设备推出了一款AI框架Tengine，其对于配置的要求相比传统框架降低了很多，我尝试着在树莓派上进行了搭建并成功运行了YOLOv2网络。 Tengine简介OAID/Tengine|github  Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模">
   
     <link rel="alternate" href="/atom.xml" title="Refrigerator" type="application/atom+xml">
   
@@ -151,7 +151,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-在树莓派上配置tengine" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-利用Tengine在树莓派上跑深度学习网络" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -159,7 +159,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      树莓派上Tengine平台的搭建
+      利用Tengine在树莓派上跑深度学习网络
     </h1>
   
 
@@ -167,8 +167,8 @@
     
     <div class="article-meta">
       
-	<a href="/2018/08/16/在树莓派上配置tengine/" class="article-date">
-	  <time datetime="2018-08-16T10:38:23.230Z" itemprop="datePublished">2018-08-16</time>
+	<a href="/2018/08/17/利用Tengine在树莓派上跑深度学习网络/" class="article-date">
+	  <time datetime="2018-08-17T01:19:24.016Z" itemprop="datePublished">2018-08-17</time>
 	</a>
 
       
@@ -176,7 +176,8 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Tengine简介"><a href="#Tengine简介" class="headerlink" title="Tengine简介"></a>Tengine简介</h2><p><a href="https://github.com/OAID/Tengine" target="_blank" rel="noopener">OAID/Tengine|github</a></p>
+        <p>树莓派是国内比较流行的一款卡片式计算机，但是受限于其硬件配置，用树莓派玩深度学习似乎有些艰难。最近<strong><em>OPENAI</em></strong>为嵌入式设备推出了一款AI框架<strong><em>Tengine</em></strong>，其对于配置的要求相比传统框架降低了很多，我尝试着在树莓派上进行了搭建并成功运行了YOLOv2网络。</p>
+<h2 id="Tengine简介"><a href="#Tengine简介" class="headerlink" title="Tengine简介"></a>Tengine简介</h2><p><a href="https://github.com/OAID/Tengine" target="_blank" rel="noopener">OAID/Tengine|github</a></p>
 <ul>
 <li>Tengine 是OPEN AI LAB 为嵌入式设备开发的一个轻量级、高性能并且模块化的引擎。</li>
 <li>Tengine在嵌入式设备上支持CPU，GPU，DLA/NPU，DSP异构计算的计算框架，实现异构计算的调度器，基于ARM平台的高效的计算库实现，针对特定硬件平台的性能优化，动态规划计算图的内存使用，提供对于网络远端AI计算能力的访问支持，支持多级别并行，整个系统模块可拆卸，基于事件驱动的计算模型，吸取已有AI计算框架的优点，设计全新的计算图表示。</li>
@@ -260,7 +261,7 @@ Release workspace default resource
           </li>
           <li class="post-copyright-link">
           <strong>Post link:  </strong>
-          <a href="/2018/08/16/在树莓派上配置tengine/" target="_blank" title="树莓派上Tengine平台的搭建">http://songrbb.github.io/2018/08/16/在树莓派上配置tengine/</a>
+          <a href="/2018/08/17/利用Tengine在树莓派上跑深度学习网络/" target="_blank" title="利用Tengine在树莓派上跑深度学习网络">http://songrbb.github.io/2018/08/17/利用Tengine在树莓派上跑深度学习网络/</a>
           </li>
           <li class="post-copyright-license">
             <strong>Copyright Notice:   </strong>
@@ -304,16 +305,6 @@ Release workspace default resource
   </div>
   
     
-<nav id="article-nav">
-  
-  
-    <a href="/2018/08/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
